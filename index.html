@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+        body {
+            background: #0b0f1a;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 20px 10%;
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* HERO */
+        /* HERO BACKGROUND IMAGE */
+        .hero {
+            height: 100vh;
+            display: flex;
+            font-size: cover;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            background: url("https://www.cyclenews.com/wp-content/uploads/2018/12/the-top-10-street-bikes-we-cant-wait-to-ride-in-2019-aprilia-rsv4-1100.jpg") center center/cover no-repeat;
+        }
+
+        /* Dark overlay so text is readable */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+        }
+
+        /* Keep text above overlay */
+        .hero h1,
+        .hero .typing,
+        .hero .btn {
+            position: relative;
+            z-index: 1;
+        }
+
+        }
+
+        .hero h1 {
+            font-size: 60px;
+        }
+
+        .typing {
+            color: #00e5ff;
+            font-size: 28px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #00e5ff, #7c4dff);
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #00e5ff;
+        }
+
+        /* ABOUT */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            padding: 20px;
+            background: #111827;
+            border-radius: 15px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-10px);
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #111827;
+            padding: 25px;
+            border-radius: 20px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px #00e5ff;
+        }
+
+        /* CONTACT */
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020617;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>MyPortfolio</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Hi, I'm Hemanth</h1>
+        <div class="typing" id="typing"></div>
+        <div>
+            <button class="btn">View Projects</button>
+            <button class="btn">Contact Me</button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about">
+            <p>
+                I am a passionate developer who loves building modern web apps and solving real-world problems using
+                technology.
+                My goal is to become a top software engineer and create impactful digital products.
+            </p>
+            <p>
+                I enjoy learning new technologies, building projects and improving my problem solving skills everyday.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">React</div>
+            <div class="skill">SQL</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3> Full Stack Flats Booking Web Application</h3>
+
+                <p>
+                <ul>• Built a full-stack real estate booking web application featuring Home, Flats List, and Flat
+                    Details pages with smooth
+                    navigation flow.</ul>
+                <ul>• Designed a responsive and pixel-accurate UI using HTML, CSS, Bootstrap, and CCBP UI Kit based on
+                    provided
+                    design specifications.</ul>
+                <ul>• Implemented backend logic for flat selection, booking confirmation, and page routing, reducing
+                    user interaction
+                    steps by 40%.</ul>
+                • Improved code maintainability through reusable components and structured layouts, enabling easy
+                scalability for
+                future features
+                </p>
+
+                <p><strong>Tech Stack:</strong> Python, LangChain, OpenAI API, Pinecone</p>
+
+                <a href="" target="_blank">
+                    <button class="btn">GitHub</button>
+                </a>
+
+
+
+                <a href="https://flatbooking512.ccbp.tech" target="_blank">
+                    <button class="btn">Live Demo</button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact">
+            <input placeholder="Name">
+            <input placeholder="Email">
+            <textarea rows="5" placeholder="Message"></textarea>
+            <button class="btn">Send Message</button>
+        </div>
+    </section>
+
+    <footer>
+        Built with ❤️ by Hemanth
+    </footer>
+
+    <script>
+        const roles = ["Full Stack Developer", "Problem Solver", "Tech Enthusiast"];
+        let i = 0,
+            j = 0,
+            current = "";
+
+        function type() {
+            if (j < roles[i].length) {
+                current += roles[i][j];
+                document.getElementById("typing").innerHTML = current;
+                j++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(erase, 1500);
+            }
+        }
+
+        function erase() {
+            if (j > 0) {
+                current = current.slice(0, -1);
+                document.getElementById("typing").innerHTML = current;
+                j--;
+                setTimeout(erase, 50);
+            } else {
+                i = (i + 1) % roles.length;
+                setTimeout(type, 200);
+            }
+        }
+        type();
+    </script>
+
+</body>
+
+</html>
